@@ -33,7 +33,7 @@ var host = Host.CreateDefaultBuilder()
     .Build();
 
 // so everything is in host so we just call in host services find IGreetingServices and we get class instantiation
-var svc = ActivatorUtilities.CreateInstance<IGreetingService>(host.Services);
+var svc = ActivatorUtilities.CreateInstance<GreetingService>(host.Services);
 // it will call this run method in class 
 svc.Run();
 
